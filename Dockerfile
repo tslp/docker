@@ -14,9 +14,9 @@ RUN apk --update upgrade \
 
 RUN mkdir -p zeronet \
   && adduser -D -h /zeronet -u 1000 -G users zeronet \
-  && chown zeronet:users zeronet \
-  && chmod +x command
-CMD ["while :; do     sleep 3600; done"]
+  && chown zeronet:users zeronet 
+  
+  CMD ["while :; do     sleep 3600; done"]
 
 
 #Expose ports
