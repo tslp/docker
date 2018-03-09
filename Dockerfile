@@ -1,6 +1,6 @@
 FROM base/archlinux
 
-RUN pacman -S bash --noconfirm
+RUN pacman -Syu --noconfirm && pacman -S bash --noconfirm
   
   CMD ["bash", "while :; do     sleep 3600; done"]
 
