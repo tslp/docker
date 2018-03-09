@@ -10,7 +10,7 @@ RUN apk --update upgrade \
   && rm -rf /var/cache/apk/* /tmp/* /var/tmp/* \
   && echo "ControlPort 9051" >> /etc/tor/torrc \
   && echo "CookieAuthentication 1" >> /etc/tor/torrc \
-  && apk add tini
+  && apk add tini \
   && apk add bash
 
 RUN mkdir -p zeronet \
