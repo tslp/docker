@@ -1,9 +1,8 @@
 FROM base/archlinux
 
-RUN pacman -Syu --noconfirm && pacman -S bash --noconfirm
+RUN pacman -Syu --noconfirm && pacman -S bash --noconfirm && chmod +x /inits
   
-  CMD ["bash", "while :; do     sleep 3600; done"]
-
+ ENTRYPOINT ["/inits"]
 
 #Expose ports
 EXPOSE 43110  13984
