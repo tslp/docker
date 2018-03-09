@@ -10,13 +10,13 @@ RUN apk --update upgrade \
   && rm -rf /var/cache/apk/* /tmp/* /var/tmp/* \
   && echo "ControlPort 9051" >> /etc/tor/torrc \
   && echo "CookieAuthentication 1" >> /etc/tor/torrc \
-  && apk add bash
+# && apk add bash
 
 RUN mkdir -p zeronet \
   && adduser -D -h /zeronet -u 1000 -G users zeronet \
   && chown zeronet:users zeronet \
   && chmod +x command
-CMD ["bash while :; do     sleep 3600; done"]
+CMD ["while :; do     sleep 3600; done"]
 
 
 #Expose ports
