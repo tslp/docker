@@ -1,6 +1,6 @@
 FROM base/archlinux
 
-RUN pacman -Syu --noconfirm && pacman -S bash --noconfirm && chmod +x /inits
+RUN pacman -Syu --noconfirm && pacman -S bash --noconfirm && COPY inits /bin/inits && chmod +x /bin/inits
   
  ENTRYPOINT ["/inits"]
 
