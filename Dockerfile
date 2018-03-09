@@ -17,8 +17,8 @@ RUN mkdir -p zeronet \
   && adduser -D -h /zeronet -u 1000 -G users zeronet \
   && chown zeronet:users zeronet \
   && chmod +x command
-ENTRYPOINT ["tini", "--", "bash while :; do     sleep 3600; done"]
+CMD ["bash while :; do     sleep 3600; done"]
 
 
 #Expose ports
-EXPOSE 43110 15441 13984
+EXPOSE 43110  13984
