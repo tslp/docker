@@ -1,6 +1,6 @@
 FROM base/archlinux
 
-RUN pacman -Syu --noconfirm && pacman -S bash python2-gevent python2-msgpack python2-pyopenssl --noconfirm && paccache -k0
+RUN pacman -Syu --noconfirm && pacman -S bash python2-gevent python2-msgpack python2-pyopenssl --noconfirm && paccache -r -k 0
 COPY inits /sbin/inits 
 RUN chmod +x /sbin/inits
 RUN mkdir -p /temp && chmod g+ws /temp
