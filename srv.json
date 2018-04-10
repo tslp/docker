@@ -1,1 +1,26 @@
-
+{
+  "log": {
+    "loglevel": "warning"
+  },
+  "inbound": {
+    "protocol": "vmess",
+    "port": 13943,
+    "settings": {
+      "clients": [
+        {
+          "id": "",
+          "alterId": 64,
+          "security": "none"
+        }
+      ]
+    },
+    "streamSettings": {
+      "network": "ws"
+    }
+  },
+  "inboundDetour": [],
+  "outbound": {
+    "protocol": "freedom",
+   "settings": {}
+  }
+}
